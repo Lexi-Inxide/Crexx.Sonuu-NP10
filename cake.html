@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SweetBite Cake Shop</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;900&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Inter;
+}
+
+body{
+  background:radial-gradient(circle at top,#2a0f1a,#0a0a10);
+  color:white;
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  position:sticky;
+  top:0;
+  display:flex;
+  justify-content:space-between;
+  padding:15px 20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(12px);
+  z-index:100;
+}
+
+nav h2{
+  font-family:"Playfair Display";
+  color:#ffb3c7;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 10px;
+  opacity:0.7;
+}
+nav a:hover{opacity:1}
+
+/* HERO */
+.hero{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  background:url("https://images.unsplash.com/photo-1519869325930-281384150729") center/cover no-repeat;
+  position:relative;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+
+.hero h1{
+  font-size:60px;
+  font-family:"Playfair Display";
+  color:#ffd1dc;
+}
+
+.hero p{color:#ddd;margin-top:10px}
+
+.btn{
+  margin-top:15px;
+  padding:10px 20px;
+  border:none;
+  border-radius:25px;
+  background:linear-gradient(90deg,#ff6aa2,#ffb3c7);
+  color:white;
+  cursor:pointer;
+}
+
+/* SECTIONS */
+section{padding:60px 20px;text-align:center}
+
+/* ABOUT */
+.about p{
+  max-width:700px;
+  margin:auto;
+  color:#ccc;
+  line-height:1.6;
+}
+
+/* =========================
+   🍰 GALLERY UPGRADED
+========================= */
+.gallery{
+  columns:3 250px;
+  column-gap:15px;
+}
+
+.gallery img{
+  width:100%;
+  margin-bottom:15px;
+  border-radius:15px;
+  transition:0.3s;
+  break-inside:avoid;
+  box-shadow:0 10px 30px rgba(0,0,0,0.4);
+}
+
+.gallery img:hover{
+  transform:scale(1.03);
+  filter:brightness(1.1);
+}
+
+/* CAKES */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:15px;
+}
+
+.card{
+  background:rgba(255,255,255,0.06);
+  padding:15px;
+  border-radius:15px;
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
+  border-color:#ff6aa2;
+}
+
+.card img{
+  width:100%;
+  border-radius:12px;
+  height:150px;
+  object-fit:cover;
+}
+
+/* =========================
+   📩 CONTACT FIXED
+========================= */
+.contact-box{
+  max-width:600px;
+  margin:auto;
+  background:rgba(255,255,255,0.06);
+  padding:25px;
+  border-radius:20px;
+  border:1px solid rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+}
+
+.contact-box input,
+.contact-box textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border:none;
+  border-radius:10px;
+  background:rgba(255,255,255,0.08);
+  color:white;
+  outline:none;
+}
+
+.contact-box textarea{
+  min-height:120px;
+  resize:none;
+}
+
+.contact-box button{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:25px;
+  background:linear-gradient(90deg,#ff6aa2,#ffb3c7);
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<nav>
+  <h2>SweetBite 🍰</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#cakes">Cakes</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Fresh & Creamy Cakes</h1>
+    <p>Made with love & baked fresh daily 🍓</p>
+    <button class="btn" onclick="document.getElementById('cakes').scrollIntoView({behavior:'smooth'})">
+      Explore Cakes
+    </button>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About Us</h2>
+  <p>
+    SweetBite Cake Shop creates premium handmade cakes with fresh ingredients and artistic decoration.
+    Every cake is designed to make your special moments unforgettable.
+  </p>
+</section>
+
+<!-- CAKES -->
+<section id="cakes">
+  <h2>Our Cakes</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587">
+      <h3>Chocolate Cake</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b">
+      <h3>Strawberry Cake</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1542826438-bd32f43d626f">
+      <h3>Birthday Cake</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec">
+      <h3>Wedding Cake</h3>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY (FIXED + MANY PHOTOS) -->
+<section id="gallery">
+  <h2>Gallery</h2>
+
+  <div class="gallery">
+
+    <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a">
+    <img src="https://images.unsplash.com/photo-1519869325930-281384150729">
+    <img src="https://images.unsplash.com/photo-1562440499-64c9a111f713">
+    <img src="https://images.unsplash.com/photo-1605478371310-a9f1e96c3a14">
+    <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729">
+    <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec">
+    <img src="https://images.unsplash.com/photo-1588195538326-c5c3b1b9a7b5">
+    <img src="https://images.unsplash.com/photo-1605475121504-5a7c7b2b3f10">
+    <img src="https://images.unsplash.com/photo-1614707267537-2f8c7d2f9a4b">
+
+  </div>
+</section>
+
+<!-- CONTACT (FIXED PROFESSIONAL FORM) -->
+<section id="contact">
+  <h2>Order Your Cake</h2>
+
+  <div class="contact-box">
+    <input placeholder="Full Name">
+    <input placeholder="Phone Number">
+    <input placeholder="Cake Type (Chocolate, Birthday, etc)">
+    <textarea placeholder="Write your custom cake details..."></textarea>
+    <button>Place Order</button>
+  </div>
+</section>
+
+<footer>
+  © 2026 SweetBite Cake Shop 🍰 All Rights Reserved
+</footer>
+
+</body>
+</html>
