@@ -7,7 +7,7 @@
 
   <!-- SEO -->
   <meta name="description" content="Sonu Thapa Magar — Developer portfolio: modern web apps, games, and experiments. Available for freelance & remote." />
-  <meta name="keywords" content="Sonu, Magar, portfolio, developer, web, app, games, C#, Python, HTML, CSS" />
+  <meta name="keywords" content="Sonu, Magar, portfolio, developer, web, app, games, Editing, Python, HTML, CSS" />
   <meta name="author" content="Sonu Thapa Magar" />
   <link rel="canonical" href="https://your-domain.example/" />
 
@@ -258,12 +258,14 @@
 <body>
   <!-- particles canvas -->
   <canvas id="particles" aria-hidden="true"></canvas>
-  <div class="cursor" id="cursor"></div>
-  <div class="floaty" style="left:8%; top:38%"></div>
-  <div class="floaty" style="left:78%; top:72%; animation-duration:18s"></div>
-  <div class="floaty" style="left:62%; top:22%; animation-duration:14s"></div>
-  <div class="blob"></div>
-  <div class="blob b2"></div>
+<div class="cursor" id="cursor"></div>
+
+<div class="floaty" style="left:8%; top:38%"></div>
+<div class="floaty" style="left:78%; top:72%; animation-duration:18s"></div>
+<div class="floaty" style="left:62%; top:22%; animation-duration:14s"></div>
+
+<div class="blob"></div>
+<div class="blob b2"></div>
 
   <!-- cursor glow -->
   <div class="cursor" id="cursor"></div>
@@ -285,9 +287,15 @@
           <div class="logo"><i data-lucide="sparkles"></i></div>
           <span>Sonu Magar</span>
         </div>
-        <div class="navlinks" id="centerNav" role="navigation" aria-label="Primary">
-          <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#study">Study</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
-        </div>
+        <div class="navlinks" id="centerNav">
+  <a href="#home">Home</a>
+  <a href="#works">My Works</a> <!-- ADD THIS -->
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#study">Study</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+</div>
         <div class="cta">
           <button id="themeToggle" class="btn"><i data-lucide="sun"></i></button>
           <a class="btn" href="#contact"><i data-lucide="mail"></i>Message</a>
@@ -337,6 +345,95 @@
       </div>
     </div>
   </header>
+  <!-- MY WORKS -->
+<!-- KEEP EVERYTHING ABOVE SAME -->
+
+<!-- MY WORKS (IMPROVED & EXPANDABLE) -->
+<section id="works" class="reveal fade-up">
+  <div class="container">
+    
+    <div class="section-head">
+      <h2>My Works</h2>
+      <span class="muted">A collection of my design & development projects</span>
+    </div>
+
+    <!-- BIG RESPONSIVE GRID -->
+    <div class="grid" style="
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    ">
+
+      <!-- WORK 1 -->
+      <div class="card">
+        <div class="shot">
+          <img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?w=600" alt="Perfume Website">
+        </div>
+        <h3>Luxury Perfume Website</h3>
+        <p class="muted">Modern luxury UI with animations and premium branding design.</p>
+        <a href="perfume.html" class="btn" target="_blank">View Project</a>
+      </div>
+
+      <!-- WORK 2 -->
+      <div class="card">
+        <div class="shot">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600" alt="Cake Shop">
+        </div>
+        <h3>🍰 Cake Shop Website</h3>
+        <p class="muted">Bakery UI with gallery, menu system and order interface.</p>
+        <a href="cake.html" class="btn" target="_blank">View Project</a>
+      </div>
+
+      <!-- WORK 3 -->
+      <div class="card">
+        <div class="shot">
+          <img src="https://via.placeholder.com/600x400?text=App+UI+Design">
+        </div>
+        <h3>App UI Design</h3>
+        <p class="muted">Mobile app UI concept with modern clean interface.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <!-- WORK 4 (NEW SLOT) -->
+      <div class="card">
+        <div class="shot">
+          <img src="https://via.placeholder.com/600x400?text=Game+Project">
+        </div>
+        <h3>Mini Game</h3>
+        <p class="muted">Interactive JavaScript-based game project.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <!-- WORK 5 (NEW SLOT) -->
+      <div class="card">
+        <div class="shot">
+          <img src="https://via.placeholder.com/600x400?text=Portfolio+Design">
+        </div>
+        <h3>Portfolio UI Design</h3>
+        <p class="muted">Clean and modern developer portfolio layout.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+      <!-- WORK 6 (NEW SLOT) -->
+      <div class="card">
+        <div class="shot">
+          <img src="https://via.placeholder.com/600x400?text=Landing+Page">
+        </div>
+        <h3>Landing Page</h3>
+        <p class="muted">High-conversion landing page design concept.</p>
+        <a href="#" class="btn">View Project</a>
+      </div>
+
+    </div>
+
+    <!-- ADD MORE NOTICE -->
+    <div style="margin-top:20px; text-align:center;">
+      <p class="muted">➕ You can duplicate any card above to add more works easily</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- KEEP EVERYTHING BELOW SAME -->
 
   <!-- ABOUT -->
   <section id="about" class="reveal fade-left">
@@ -375,24 +472,24 @@
           <h3 style="margin:4px 0 12px 0">Core Skills</h3>
           <div class="grid" style="grid-template-columns:1fr; gap:10px">
             <div class="skill-box">
-              <div class="skill-name"><i data-lucide="code"></i> C#</div>
+              <div class="skill-name"><i data-lucide="code"></i> HTML</div>
               <div class="bar" data-progress="false"><span style="width:20%"></span></div>
-              <span class="muted">20%</span>
-            </div>
-            <div class="skill-box">
-              <div class="skill-name"><i data-lucide="braces"></i> Python</div>
-              <div class="bar" data-progress="false"><span style="width:20%"></span></div>
-              <span class="muted">20%</span>
-            </div>
-            <div class="skill-box">
-              <div class="skill-name"><i data-lucide="file-code"></i> HTML</div>
-              <div class="bar" data-progress="false"><span style="width:80%"></span></div>
               <span class="muted">80%</span>
             </div>
             <div class="skill-box">
-              <div class="skill-name"><i data-lucide="library"></i> CSS</div>
+              <div class="skill-name"><i data-lucide="braces"></i> CSS</div>
+              <div class="bar" data-progress="false"><span style="width:20%"></span></div>
+              <span class="muted">70%</span>
+            </div>
+            <div class="skill-box">
+              <div class="skill-name"><i data-lucide="file-code"></i> C#</div>
+              <div class="bar" data-progress="false"><span style="width:80%"></span></div>
+              <span class="muted">5%</span>
+            </div>
+            <div class="skill-box">
+              <div class="skill-name"><i data-lucide="library"></i> Python</div>
               <div class="bar" data-progress="false"><span style="width:60%"></span></div>
-              <span class="muted">60%</span>
+              <span class="muted">20%</span>
             </div>
           </div>
         </div>
@@ -401,22 +498,21 @@
           <h3 style="margin:4px 0 12px 0">Other Skills (In-Progress)</h3>
           <div class="grid" style="grid-template-columns:1fr; gap:10px">
             <div class="skill-box">
-              <div class="skill-name"><i data-lucide="database"></i> App Development</div>
+              <div class="skill-name"><i data-lucide="database"></i> EDITING</div>
               <div class="bar" data-progress="false"><span style="width:80%"></span></div>
               <span class="muted">80%</span>
             </div>
             <div class="skill-box">
-              <div class="skill-name"><i data-lucide="terminal"></i> GitHub</div>
+              <div class="skill-name"><i data-lucide="terminal"></i> EDITING TUTORIALS</div>
               <div class="bar" data-progress="false"><span style="width:20%"></span></div>
-              <span class="muted">20%</span>
+              <span class="muted">70%</span>
             </div>
             <div class="skill-box">
               <div class="skill-name"><i data-lucide="brain"></i> Games Cheat</div>
               <div class="bar" data-progress="false"><span style="width:70%"></span></div>
-              <span class="muted">70%</span>
+              <span class="muted">40%</span>
             </div>
           </div>
-          <p class="hint" style="margin-top:8px">Tip: update these as you grow ✨</p>
         </div>
       </div>
     </div>
@@ -550,10 +646,10 @@
           <h3 style="margin-top:0">Find me online</h3>
           <p class="muted">Open to internships, contracts, and collabs.</p>
           <div style="display:flex; flex-wrap:wrap; gap:10px">
-            <a class="btn" href="https://github.com/Lexi-Inxide" target="_blank" rel="noopener"><i data-lucide="github"></i> GitHub</a>
-            <a class="btn" href="https://www.instagram.com/magarrrr_x/?hl=en" target="_blank" rel="noopener"><i data-lucide="instagram"></i> Instagram</a>
-            <a class="btn" href="https://www.facebook.com/ds.magar.416997" target="_blank" rel="noopener"><i data-lucide="facebook"></i> Facebook</a>
-            <a class="btn" href="https://www.tiktok.com/@shresthaniyal?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener"><i data-lucide="tiktok"></i> Tiktok</a>
+            <a class="btn" href="https://github.com/Lexi-Inxide" target="_blank" rel="noopener"><i data-lucide="github"></i> Github</a>
+            <a class="btn" href="https://www.instagram.com/maggarr_x/?hl=en" target="_blank" rel="noopener"><i data-lucide="instagram"></i> Instagram</a>
+            <a class="btn" href="https://www.facebook.com/profile.php?id=100042393489134" target="_blank" rel="noopener"><i data-lucide="facebook"></i> Facebook</a>
+            <a class="btn" href="https://www.tiktok.com/@leximgr10" target="_blank" rel="noopener"><i data-lucide="tiktok"></i> Tiktok</a>
           </div>
         </div>
       </div>
